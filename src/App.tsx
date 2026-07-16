@@ -5,8 +5,8 @@ function App() {
   const [number, setNumber] = useState(1)
   const [dark, setDark] = useState(false)
 
-  const getItems = useCallback(() => {
-    return [number, number + 1, number + 2]
+  const getItems = useCallback((incrementor) => {
+    return [number + incrementor, number + 1 + incrementor, number + 2 + incrementor]
   }, [number])
 
   const theme = {
