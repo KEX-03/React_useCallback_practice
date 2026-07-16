@@ -5,7 +5,7 @@ export default function List({ getItems }) {
 
     useEffect(() => {
         setItems(getItems())
-        console.log('Updating List of Items')
+        console.log('Updating Items')
     }, [getItems])
 
     return items.map(item => <div key={item}>{item}</div>)
